@@ -1,4 +1,4 @@
-// import About from "@/components/about";
+import About from "@/components/About";
 // import Contact from "@/components/contact";
 // import Experience from "@/components/experience";
 import Intro from "@/components/Intro";
@@ -11,8 +11,8 @@ export default function Home() {
     <main className="flex flex-col items-center px-4">
       <Intro />
       <Divider />
-      {/* <About />
-      <Projects />
+      <About />
+      {/* <Projects />
       <Skills />
       <Experience />
       <Contact /> */}
