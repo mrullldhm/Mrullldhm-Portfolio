@@ -2,7 +2,7 @@ import About from "@/components/About";
 // import Contact from "@/components/contact";
 // import Experience from "@/components/experience";
 import Intro from "@/components/Intro";
-// import Projects from "@/components/projects";
+import Projects from "@/components/Project";
 import Divider from "@/components/Divider";
 // import Skills from "@/components/skills";
 
@@ -12,8 +12,8 @@ export default function Home() {
       <Intro />
       <Divider />
       <About />
-      {/* <Projects />
-      <Skills />
+      <Projects />
+      {/* <Skills />
       <Experience />
       <Contact /> */}
     </main>

@@ -28,7 +28,7 @@ export default function About() {
       </p>
       <br />
       <p>
-        In August 2024, I started chasing a dream of becoming a web developer.
+        Late 2024, I started chasing a dream of becoming a web developer.
         Coming from a math background and a mixed work experiences, coding felt
         like an entirely new world.
       </p>
