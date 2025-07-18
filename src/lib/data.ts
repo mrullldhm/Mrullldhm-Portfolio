@@ -9,27 +9,27 @@ import project4 from "@/assets/work-4.png";
 
 export const links = [
   {
-    name: "Home",
+    name: "HOME",
     hash: "#home",
   },
   {
-    name: "About",
+    name: "ABOUT",
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "PROJECT",
+    hash: "#project",
   },
   {
-    name: "Skills",
-    hash: "#skills",
+    name: "SKILL",
+    hash: "#skill",
   },
   {
-    name: "Experience",
+    name: "EXPERIENCE",
     hash: "#experience",
   },
   {
-    name: "Contact",
+    name: "CONTACT",
     hash: "#contact",
   },
 ] as const;
