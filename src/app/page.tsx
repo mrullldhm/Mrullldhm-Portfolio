@@ -3,15 +3,15 @@
 // import Experience from "@/components/experience";
 import Intro from "@/components/Intro";
 // import Projects from "@/components/projects";
-// import SectionDivider from "@/components/section-divider";
+import Divider from "@/components/Divider";
 // import Skills from "@/components/skills";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
       <Intro />
-      {/* <SectionDivider />
-      <About />
+      <Divider />
+      {/* <About />
       <Projects />
       <Skills />
       <Experience />

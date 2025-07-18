@@ -7,7 +7,6 @@ import Link from "next/link";
 import { BsArrow90DegRight, BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
-import { truncate } from "fs/promises";
 
 export default function Intro() {
   return (
