@@ -3,5 +3,5 @@ type HeadingProps = {
 };
 
 export default function Heading({children}:HeadingProps) {
-  return <h2 className="text-3xl font-semibold capitalize mb-8 tracking-widest">{children}</h2>;
+  return <h2 className="text-3xl font-semibold capitalize mb-8 tracking-widest  text-center">{children}</h2>;
 }
