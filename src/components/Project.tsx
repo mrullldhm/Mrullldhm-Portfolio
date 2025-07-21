@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Project() {
   return (
-    <section>
+    <section id="project" className="scroll-mt-28">
       <Heading>Project</Heading>
       <div>
         {projectsData.map((project, index) => (

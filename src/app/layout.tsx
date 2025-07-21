@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
         className={`${libreBaskerville.variable} font-serif antialiased relative h-[5000px] pt-28 sm:pt-36`}
       >
