@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Heading from "./Heading";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+  const { ref } = useSectionInView("ABOUT");
+
   return (
     <motion.section
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
@@ -13,6 +16,7 @@ export default function About() {
         delay: 0.175,
       }}
       id="about"
+      ref={ref}
     >
       <Heading>About Me</Heading>
       <p>
@@ -29,9 +33,9 @@ export default function About() {
       </p>
       <br />
       <p>
-        Late 2024, I started chasing a dream of becoming a web developer.
-        Coming from a math background and a mixed work experiences, coding felt
-        like an entirely new world.
+        Late 2024, I started chasing a dream of becoming a web developer. Coming
+        from a math background and a mixed work experiences, coding felt like an
+        entirely new world.
       </p>
       <br />
       <p>
