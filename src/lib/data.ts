@@ -69,6 +69,7 @@ export const projectsData = [
       "Clerk",
     ],
     imageUrl: project1,
+    url: "https://moresume.vercel.app/",
   },
   {
     title: "Image Search App – Powered by Pexels",
@@ -76,6 +77,7 @@ export const projectsData = [
       "Created a responsive image search app using the Pexels API with JavaScript. Features include search, pagination, and modal image previews with full mobile support.",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     imageUrl: project2,
+    url: "https://mrullldhm.github.io/Image-Search-App-Powered-by-Pexels/",
   },
   {
     title: "Financial Knowledge Quiz Game",
@@ -83,6 +85,7 @@ export const projectsData = [
       "Developed an interactive quiz game to test financial literacy. Includes dynamic questions, real-time scoring, and a mobile-friendly design.",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     imageUrl: project3,
+    url: "https://mrullldhm.github.io/Financial-Knowledge-Quiz-Game/",
   },
 
   {
@@ -91,6 +94,7 @@ export const projectsData = [
       "Built a fully functional calculator with support for basic and advanced operations. Includes keyboard support and responsive layout for various devices",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     imageUrl: project4,
+    url: "https://mrullldhm.github.io/Calculator-Application/",
   },
 ] as const;
 
