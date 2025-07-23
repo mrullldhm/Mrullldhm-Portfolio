@@ -40,7 +40,7 @@ export const experiencesData = [
     location: "18 Tai Seng, Singapore",
     description:
       "Assisted in daily operations of the F&B outlet, managed staff schedules, ensured high service standards, and supported inventory and cost control to enhance customer satisfaction and efficiency.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(CgWorkAlt),
     date: "2021 - 2023",
   },
   {
