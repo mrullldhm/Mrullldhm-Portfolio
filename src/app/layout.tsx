@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import ThemeSwitch from "@/components/ThemeSwitch";
+import ThemeContextProvider from "@/context/ThemeContext";
 
 // Load Libre Baskerville font
 const libreBaskerville = Libre_Baskerville({
@@ -32,12 +34,15 @@ export default function RootLayout({
       >
         <div className="bg-[#333446] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
         <div className="bg-[#7F8CAA] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster position="top-right" />
-        </ActiveSectionContextProvider>
+        {/* <ThemeContextProvider> */}
+          {/* <ThemeSwitch /> */}
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster position="top-right" />
+          </ActiveSectionContextProvider>
+        {/* </ThemeContextProvider> */}
       </body>
     </html>
   );
