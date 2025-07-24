@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amirul Adham | Portfolio Website
+![Homepage screenshot](/src/assets/screenshot.png)
 
-## Getting Started
+## Overview
+This is a personal portfolio website for Amirul Adham, a full-stack developer showcasing expertise in modern web technologies. The site highlights projects, skills, experience, and provides a way for visitors to get in touch.
 
-First, run the development server:
+## Features
+- **Intro Section**: A welcoming introduction with a brief overview.
+- **About Section**: Details about Amirul Adham’s background and expertise.
+- **Projects Section**: Showcases a collection of projects with descriptions and links.
+- **Skills Section**: Highlights technical skills and proficiencies.
+- **Experience Section**: Displays professional experience in a vertical timeline format.
+- **Contact Section**: Includes a form for visitors to reach out.
+- **Responsive Design**: Optimized for both desktop and mobile devices with smooth scrolling.
+- **Interactive UI**: Features animations using Framer Motion and toast notifications with React Hot Toast.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- **Frontend**: Next.js (15.4.1), React (19.1.0), React DOM (19.1.0)
+- **Styling**: Tailwind CSS (4), Libre Baskerville font (via Next.js font optimization)
+- **Animations**: Framer Motion (12.23.6)
+- **Interactivity**: React Intersection Observer (9.16.0), React Hot Toast (2.5.2)
+- **Icons**: React Icons (5.5.0)
+- **Timeline**: React Vertical Timeline Component (3.5.3)
+- **Email Handling**: @react-email/components (0.3.2), @react-email/tailwind (1.2.2), Resend (4.7.0)
+- **Utilities**: clsx (2.1.1)
+- **Type Safety**: TypeScript (5), @types/react, @types/react-dom, @types/node
+- **Linting**: ESLint (9), eslint-config-next (15.4.1)
+- **Deployment**: Configured for deployment on platforms like Vercel or Netlify
+- **Version Control**: Git, hosted on GitHub
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Installation
+To run this project locally:
+1. Clone the repository:
