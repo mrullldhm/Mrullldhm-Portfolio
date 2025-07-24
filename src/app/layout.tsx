@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
-import ThemeSwitch from "@/components/ThemeSwitch";
-import ThemeContextProvider from "@/context/ThemeContext";
+// import ThemeSwitch from "@/components/ThemeSwitch";
+// import ThemeContextProvider from "@/context/ThemeContext";
 
 // Load Libre Baskerville font
 const libreBaskerville = Libre_Baskerville({
