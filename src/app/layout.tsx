@@ -3,6 +3,7 @@ import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
+import { Toaster } from "react-hot-toast";
 
 // Load Libre Baskerville font
 const libreBaskerville = Libre_Baskerville({
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Toaster position="top-right" />
         </ActiveSectionContextProvider>
       </body>
     </html>

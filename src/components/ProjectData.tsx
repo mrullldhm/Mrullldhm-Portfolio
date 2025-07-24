@@ -31,7 +31,7 @@ export default function ProjectData({
         scale: scrollScale,
         opacity: scrollOpacity,
       }}
-      className="flex flex-wrap group bg-gray-100 max-w-[42rem] overflow-hidden sm:pr-8 relative mb-3 sm:mb-8 last:mb-0 shadow-lg rounded-lg even:pl-8 hover:shadow-2xl"
+      className="cursor-pointer flex flex-wrap group bg-gray-100 max-w-[42rem] overflow-hidden sm:pr-8 relative mb-3 sm:mb-8 last:mb-0 shadow-lg rounded-lg even:pl-8 hover:shadow-2xl"
       onClick={() => window.open(url, "_blank")}
     >
       <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-1/2 flex flex-col h-full group-even:ml-[18rem]">
