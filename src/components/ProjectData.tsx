@@ -52,7 +52,7 @@ export default function ProjectData({
       <Image
         src={imageUrl}
         alt="Project Image"
-className="sm:absolute sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+        className="sm:absolute sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
@@ -63,7 +63,8 @@ className="sm:absolute sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow
         group-even:group-hover:translate-y-3
         group-even:group-hover:rotate-2
 
-        group-even:right-[initial] group-even:-left-40"      />
+        group-even:right-[initial] group-even:-left-40"
+      />
     </motion.section>
   );
 }
