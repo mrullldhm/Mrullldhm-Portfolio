@@ -6,6 +6,7 @@ import project1 from "@/assets/work-1.png";
 import project2 from "@/assets/work-2.png";
 import project3 from "@/assets/work-3.png";
 import project4 from "@/assets/work-4.png";
+import project5 from "@/assets/work-5.png";
 
 export const links = [
   {
@@ -70,6 +71,19 @@ export const projectsData = [
     ],
     imageUrl: project1,
     url: "https://moresume.vercel.app/",
+  },
+  {
+    title: "Movie Search Favourite",
+    description:
+      "A movie search and favourites app powered by the TMDB API. Features include browsing popular movies, searching by title, and saving favourites with localStorage persistence.",
+    tags: [
+      "React",
+      "Vite",
+      "Typescript",
+     
+    ],
+    imageUrl: project5,
+    url: "https://movie-search-favourites.vercel.app/",
   },
   {
     title: "Image Search App – Powered by Pexels",
