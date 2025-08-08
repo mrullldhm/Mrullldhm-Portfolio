@@ -76,12 +76,7 @@ export const projectsData = [
     title: "Movie Search Favourite",
     description:
       "A movie search and favourites app powered by the TMDB API. Features include browsing popular movies, searching by title, and saving favourites with localStorage persistence.",
-    tags: [
-      "React",
-      "Vite",
-      "Typescript",
-     
-    ],
+    tags: ["React", "Vite", "Typescript"],
     imageUrl: project5,
     url: "https://movie-search-favourites.vercel.app/",
   },
