@@ -7,6 +7,8 @@ import project2 from "@/assets/work-2.png";
 import project3 from "@/assets/work-3.png";
 import project4 from "@/assets/work-4.png";
 import project5 from "@/assets/work-5.png";
+import project6 from "@/assets/work-6.png";
+
 
 export const links = [
   {
@@ -55,6 +57,21 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "",
+    description:
+      "n",
+    tags: [
+      "Angular",
+      "Javascript",
+      "Typescript",
+      "Tailwind",
+      "PostgreSQL",
+      "Prisma"
+    ],
+    imageUrl: project6,
+    url: "https://www.key2key.digital",
+  },
   {
     title: "Moresume - AI Powered Resume Builder",
     description:

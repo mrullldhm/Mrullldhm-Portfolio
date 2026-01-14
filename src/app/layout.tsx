@@ -1,25 +1,46 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville } from "next/font/google";
+import { Space_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
-// import ThemeSwitch from "@/components/ThemeSwitch";
-// import ThemeContextProvider from "@/context/ThemeContext";
 
-// Load Libre Baskerville font
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
+// Premium typography
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["400", "700"], // normal and bold
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Amirul Adham | Portfolio",
+  title: "Amirul Adham | Full-Stack Developer & Designer",
   description:
-    "Amirul Adham is a full-stack developer with expertise in modern web technologies.",
+    "Premium portfolio showcasing full-stack development expertise with minimalist design philosophy.",
+  keywords: [
+    "developer",
+    "portfolio",
+    "next.js",
+    "react",
+    "full-stack",
+    "web development",
+    "design",
+  ],
+  authors: [{ name: "Amirul Adham" }],
+  openGraph: {
+    title: "Amirul Adham | Full-Stack Developer",
+    description:
+      "Luxury minimalist portfolio. Crafting digital experiences with technical precision.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -28,21 +49,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${libreBaskerville.variable} font-serif antialiased relative pt-28 sm:pt-36`}
+        className={`${spaceGrotesk.variable} ${playfairDisplay.variable} bg-white text-neutral-950`}
+        style={{
+          fontFamily: "var(--font-space-grotesk)",
+        }}
       >
-        <div className="bg-[#333446] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="bg-[#7F8CAA] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-        {/* <ThemeContextProvider> */}
-          {/* <ThemeSwitch /> */}
+        {/* Main Content */}
+        <div className="">
           <ActiveSectionContextProvider>
             <Header />
-            {children}
+            <main className="min-h-screen">{children}</main>
             <Footer />
-            <Toaster position="top-right" />
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 4000,
+                style: {
+                  background: "var(--bg-primary)",
+                  color: "var(--text-primary)",
+                  border: `1px solid var(--border-color)`,
+                  borderRadius: "0",
+                  fontSize: "0.875rem",
+                  letterSpacing: "0.02em",
+                },
+              }}
+            />
           </ActiveSectionContextProvider>
-        {/* </ThemeContextProvider> */}
+        </div>
       </body>
     </html>
   );

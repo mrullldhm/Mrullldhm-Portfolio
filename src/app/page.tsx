@@ -1,3 +1,5 @@
+"use client";
+
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
@@ -8,7 +10,7 @@ import Skill from "@/components/Skill";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex flex-col items-center justify-center">
       <Intro />
       <Divider />
       <About />
