@@ -1,74 +1,123 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
-import Button from "./Button";
 import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("CONTACT");
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <motion.section
-      id="contact"
-      ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-    >
-      <Heading>Contact me</Heading>
+    <section id="contact" ref={ref} className="pt-32 sm:pt-40 w-full md:w-3/4">
+      {/* Content */}
+      <div className="mx-auto px-8 lg:px-12 gap-8 flex flex-col">
+        <Heading>Contact</Heading>
 
-      <p className="text-gray-700 -mt-6 ">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:mrullldhm94@gmail.com">
-          mrullldhm94@gmail.com
-        </a>{" "}
-        or through this form.
-      </p>
+        <div className="flex flex-col gap-8">
+          {/* Contact Info */}
+          <motion.div
+            className="flex gap-40"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex flex-col items-center justify-center bg-white border w-1/2 border-neutral-200 rounded-sm p-8 hover:border-neutral-950 transition-colors">
+              <h3 className="text-base font-semibold text-neutral-950 mb-2 tracking-widest uppercase">
+                Email
+              </h3>
+              <p className="text-neutral-600 mb-4 text-sm">
+                The quickest way to reach me
+              </p>
+              <a
+                href="mailto:mrullldhm94@gmail.com"
+                className="text-neutral-950 hover:text-neutral-600 font-medium text-base transition-colors"
+              >
+                mrullldhm94@gmail.com
+              </a>
+            </div>
 
-      <form
-        className="mt-10 flex flex-col "
-        action={async (formData) => {
-          const { error } = await sendEmail(formData);
+            <div className="flex flex-col items-center justify-center bg-white border w-1/2 border-neutral-200 rounded-sm p-8 hover:border-neutral-950 transition-colors">
+              <h3 className="text-base font-semibold text-neutral-950 mb-2 tracking-widest uppercase">
+                Connect
+              </h3>
+              <p className="text-neutral-600 mb-4 text-sm">
+                Follow me on social media
+              </p>
+              <div className="flex gap-6">
+                <a
+                  href="https://linkedin.com/in/mrullldhm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-600 hover:text-neutral-950 transition-colors font-medium"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/mrullldhm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-600 hover:text-neutral-950 transition-colors font-medium"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </motion.div>
 
-          if (error) {
-            toast.error(error);
-            return;
-          }
+          {/* Contact Form */}
+          <motion.form
+            className="flex flex-col gap-4 "
+            action={async (formData) => {
+              setIsLoading(true);
+              const { error } = await sendEmail(formData);
+              setIsLoading(false);
 
-          toast.success("Email sent successfully!");
-        }}
-      >
-        <input
-          className="h-14 p-4 rounded-lg border transition-all"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={500}
-          placeholder="Your email"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg border p-4 transition-all"
-          name="message"
-          placeholder="Your message"
-          required
-          maxLength={5000}
-        />
-        <Button />
-      </form>
-    </motion.section>
+              if (error) {
+                toast.error(error);
+                return;
+              }
+
+              toast.success("Email sent successfully!");
+            }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <motion.input
+              className="w-full bg-white border border-neutral-200 rounded-lg px-6 py-3 text-neutral-950 placeholder-neutral-500 focus:outline-none focus:border-neutral-950 transition-colors"
+              name="senderEmail"
+              type="email"
+              required
+              maxLength={500}
+              placeholder="Your email"
+              whileFocus={{ scale: 1.01 }}
+            />
+            <motion.textarea
+              className="w-full h-32 bg-white border border-neutral-200 rounded-lg px-6 py-3 text-neutral-950 placeholder-neutral-500 focus:outline-none focus:border-neutral-950 transition-colors resize-none"
+              name="message"
+              placeholder="Your message"
+              required
+              maxLength={5000}
+              whileFocus={{ scale: 1.01 }}
+            />
+            <motion.button
+              type="submit"
+              disabled={isLoading}
+              className="btn btn-primary w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {isLoading ? "Sending..." : "Send Message"}
+            </motion.button>
+          </motion.form>
+        </div>
+      </div>
+    </section>
   );
 }

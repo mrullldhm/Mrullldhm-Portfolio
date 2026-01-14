@@ -1,14 +1,12 @@
 "use client";
 
 import { projectsData } from "@/lib/data";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-// ProjectData props type declaration
 type ProjectDataProps = (typeof projectsData)[number];
 
-// Declare ProjectData component
 export default function ProjectData({
   title,
   description,
@@ -16,55 +14,64 @@ export default function ProjectData({
   imageUrl,
   url,
 }: ProjectDataProps) {
-  const ref = useRef<HTMLTableSectionElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const scrollOpacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <motion.section
+    <motion.div
       ref={ref}
-      style={{
-        scale: scrollScale,
-        opacity: scrollOpacity,
-      }}
-      className="border border-gray-300 cursor-pointer flex flex-wrap group bg-gray-100 max-w-[42rem] overflow-hidden sm:pr-8 relative mb-3 sm:mb-8 last:mb-0 shadow-lg rounded-lg even:pl-8 hover:shadow-2xl"
-      onClick={() => window.open(url, "_blank")}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+      viewport={{ once: true, margin: "-100px" }}
+      className="group h-full"
     >
-      <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-1/2 flex flex-col h-full sm:group-even:ml-[18rem]">
-        <h3 className="text-2xl font-semibold">{title}</h3>
-        <p className="mt-2 leading-relaxed">{description}</p>
-        <ul className="flex flex-wrap pt-4 gap-2 sm:mt-auto">
-          {tags.map((tag, index) => (
-            <li
-              className="bg-gray-800 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-xl"
-              key={index}
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <motion.a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-col gap-4 h-full bg-white border border-neutral-200 rounded-sm  hover:border-neutral-950 transition-all duration-300 shadow-2xl hover:shadow-md"
+        whileHover={{ y: -4 }}
+      >
+        {/* Image Container */}
+        <div className=" w-4/5 h-40 overflow-hidden bg-neutral-100">
+          <motion.div
+            className="w-full h-full"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image src={imageUrl} alt={title} fill className="object-cover" />
+          </motion.div>
 
-      <Image
-        src={imageUrl}
-        alt="Project Image"
-        className="sm:absolute sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
+          {/* Subtle Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        </div>
 
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
+        {/* Content Container */}
+        <div className="p-6 sm:p-8 flex flex-col gap-2">
+          {/* Title */}
+          <h3 className="font-light text-neutral-950">
+            {title}
+          </h3>
 
-        group-even:right-[initial] group-even:-left-40"
-      />
-    </motion.section>
+          {/* Description */}
+          <p className="text-neutral-600 text-sm sm:text-base leading-relaxed line-clamp-2">
+            {description}
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 pt-2">
+            {tags.slice(0, 99).map((tag, index) => (
+              <motion.span
+                key={index}
+                className="bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-lg text-xs font-medium text-neutral-700 hover:border-neutral-950 transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                {tag}
+              </motion.span>
+            ))}
+          </div>
+        </div>
+      </motion.a>
+    </motion.div>
   );
 }
