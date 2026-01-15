@@ -22,7 +22,7 @@ export default function Skill() {
   return (
     <section id="skill" className="pt-32 sm:pt-40 w-full md:w-3/4" ref={ref}>
       {/* Content */}
-      <div className="mx-auto px-8 lg:px-12 gap-8 flex flex-col">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12 gap-8 flex flex-col">
         <Heading>Skills</Heading>
 
         <div className="flex flex-col gap-8">

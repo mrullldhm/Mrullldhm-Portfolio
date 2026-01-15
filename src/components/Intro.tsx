@@ -30,7 +30,7 @@ export default function Intro() {
       ref={containerRef}
     >
       {/* Content container */}
-      <div className="mx-auto px-6 lg:px-12">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           ref={ref}
           style={{ y, opacity }}

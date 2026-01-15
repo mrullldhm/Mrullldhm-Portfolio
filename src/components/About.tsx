@@ -22,7 +22,7 @@ export default function About() {
       ref={containerRef}
     >
       {/* Content */}
-      <div className="mx-auto px-8 lg:px-12">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12">
         <Heading>About</Heading>
 
         <motion.div

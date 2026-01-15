@@ -16,7 +16,7 @@ export default function Experience() {
       ref={ref}
     >
       {/* Content */}
-      <div className="mx-auto px-8 lg:px-12 gap-8 flex flex-col">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12 gap-8 flex flex-col">
         <Heading>Experience</Heading>
 
         <div className="relative">

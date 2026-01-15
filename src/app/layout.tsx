@@ -60,7 +60,7 @@ export default function RootLayout({
         <div className="">
           <ActiveSectionContextProvider>
             <Header />
-            <main className="min-h-screen">{children}</main>
+            <main className="min-h-screen px-4">{children}</main>
             <Footer />
             <Toaster
               position="top-right"

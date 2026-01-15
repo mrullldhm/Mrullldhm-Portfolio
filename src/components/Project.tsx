@@ -12,7 +12,7 @@ export default function Project() {
   return (
     <section id="project" className="pt-32 sm:pt-40 w-full md:w-4/5" ref={ref}>
       {/* Content */}
-      <div className="mx-auto px-8 lg:px-12 gap-8 flex flex-col">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12 gap-8 flex flex-col">
         <Heading>Projects</Heading>
         {/* <p className="text-base md:text-lg text-neutral-600 mb-16  text-justify">
           A selection of recent work
