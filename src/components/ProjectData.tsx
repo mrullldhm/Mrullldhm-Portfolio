@@ -33,7 +33,7 @@ export default function ProjectData({
         whileHover={{ y: -4 }}
       >
         {/* Image Container */}
-        <div className=" w-4/5 h-40 overflow-hidden bg-neutral-100">
+        <div className=" w-4/5 h-50 overflow-hidden bg-neutral-100">
           <motion.div
             className="w-full h-full"
             whileHover={{ scale: 1.05 }}
@@ -49,9 +49,7 @@ export default function ProjectData({
         {/* Content Container */}
         <div className="p-6 sm:p-8 flex flex-col gap-2">
           {/* Title */}
-          <h3 className="font-light text-neutral-950">
-            {title}
-          </h3>
+          <h3 className="font-light text-neutral-950">{title}</h3>
 
           {/* Description */}
           <p className="text-neutral-600 text-sm sm:text-base leading-relaxed line-clamp-2">

@@ -93,11 +93,7 @@ export default function Intro() {
                 <BsArrow90DegRight className="w-4 h-4" />
               </motion.button>
 
-              <motion.a
-                className="btn w-46"
-                href="/Muhamad_Amirul_Adham_Resume_2025.pdf"
-                download
-              >
+              <motion.a className="btn w-46" href="/Resume.pdf" download>
                 Resume
                 <HiDownload className="w-4 h-4" />
               </motion.a>
