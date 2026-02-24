@@ -8,7 +8,8 @@ import project3 from "@/assets/work-3.png";
 import project4 from "@/assets/work-4.png";
 import project5 from "@/assets/work-5.png";
 import project6 from "@/assets/work-6.png";
-
+import project7 from "@/assets/work-7.png";
+import project8 from "@/assets/work-8.png";
 
 export const links = [
   {
@@ -59,15 +60,14 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "",
-    description:
-      "n",
+    description: "n",
     tags: [
       "Angular",
       "Javascript",
       "Typescript",
       "Tailwind",
       "PostgreSQL",
-      "Prisma"
+      "Prisma",
     ],
     imageUrl: project6,
     url: "https://www.key2key.digital",
@@ -88,6 +88,20 @@ export const projectsData = [
     ],
     imageUrl: project1,
     url: "https://moresume.vercel.app/",
+  },
+  {
+    title: "Task - Todo App",
+    description: "",
+    tags: ["React", "Vite", "ASP.NET"],
+    imageUrl: project7,
+    url: "https://github.com/mrullldhm/task",
+  },
+  {
+    title: "Subscription Tracker API - Automated Workflow",
+    description: "",
+    tags: ["NodeJs", "ExpressJs"],
+    imageUrl: project8,
+    url: "https://github.com/mrullldhm/api-subscription-tracker",
   },
   {
     title: "Movie Search Favourite",
